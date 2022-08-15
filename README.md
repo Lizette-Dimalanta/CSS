@@ -29,9 +29,29 @@ Wednesday, 15 August 2022.
 - Style of an element can be defined once and applied everywhere.
 - __Cascading__ implies the latest style overrides the previous definition.
 
-# Anatomy of a CSS Rule
+__*More Information*__: 
 
-![Anatomy of a CSS Rule](https://learnwebcode.com/wp-content/uploads/2010/02/anatomy-of-a-css-rule.gif)
+[CSS Introduction - W3Schools](https://www.w3schools.com/css/css_intro.asp)
+
+[CSS: Cascading Style Sheets - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+# Anatomy of a CSS Ruleset
+
+![Anatomy of a CSS Rule](https://static.au.edusercontent.com/files/8fC7Q2nH6xjwkJeYwnJzfVwq)
+
+## Definitions:
+
+- __Ruleset__: `p{color: red;}`
+  - The whole structure.
+- __Selector__: `<p>`
+  - The left hand side of the ruleset.
+  - Determines which elements will be styled.
+- __Property__: `color:`
+  - Which property of the selected element you want to change.
+- __Property Value__: `red;`
+  - Choose from possible values for given property.
+- __Declaration__: `color: red;`
+  - Combination of property and property value.
 
 # Style Tag
 
@@ -42,17 +62,15 @@ CSS Syntax:
 ``` html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Text</title>
-        <style>
-            [element]{
-                property: value;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Text</h1>
-    </body>
+  <style>
+    p {
+      color: green;
+      text-decoration: underline;
+      font-size: 20px;
+    }
+  </style>
+  <p>I'm a styled paragraph</p>
+  <p>I'm another styled paragraph</p>
 </html>
 ```
 
@@ -150,8 +168,9 @@ __*More Information*__: [CSS Units - W3Schools](https://www.w3schools.com/cssref
 
 __Inline Styling:__ Style an element **_inline_** with the HTML tag.
 
-`<h1 style="color:red; font-size:70px;">Inline Style</h1>`
+`<p style="color: red">Inline styling is handy</p>`
 
+- We can keep adding key value pairs in the style attribute, as long as we separate them with a semicolon `';'`.
 - Least effective for maintaining large code.
 
 __Internal Style Sheet:__ Style elements in the __*same HTML document*__, requires `<style></style>` tag.
@@ -162,7 +181,7 @@ __External Style Sheet:__ Style elements in a __*separate CSS file*__ and links 
 
 ### Linking to external stylesheet:
 
-`<link rel="stylesheet" href="css/style.css">`
+`<link rel="stylesheet" href="css/style.css"/>`
 
 # Cascading Specificity
 
@@ -171,5 +190,13 @@ __External Style Sheet:__ Style elements in a __*separate CSS file*__ and links 
 - A common way of calculating specificity:
   1. __`<Inline Style>`:__ 1000 points
   2. __`#ID`__: 100 points
+
+        ![ID-level Specificity](https://static.au.edusercontent.com/files/SSQKw7dsf9nZTLHYwgGMvHpT)
+
   3. __`.Class` & Pseudo Class:__ : 10 points
+
+        ![Class-level Specificity](https://static.au.edusercontent.com/files/gHbQs48btnDuABdFI8ta1Bdj)
+
   4. __Element__ `<p>`: 1 point
+
+        ![Element-level Specificity](https://static.au.edusercontent.com/files/CK21lEi9H0NB1BsN6lZZs2mC)

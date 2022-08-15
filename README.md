@@ -124,8 +124,7 @@ CSS Syntax:
         ```
 
   - __Pseudo Classes:__
-    - Defines special state of an element.
-    - eg. Hovering over a link/mouse over button.
+    - A way to style elements in a specific state, such as being hovered over.
   
         ```html
         <body>

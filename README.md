@@ -125,6 +125,10 @@ CSS Syntax:
 
   - __Pseudo Classes:__
     - A way to style elements in a specific state, such as being hovered over.
+
+    `.selector:psuedo-class {
+  attribute: property;
+}`
   
         ```html
         <body>
@@ -155,13 +159,19 @@ CSS Syntax:
   
 - ### __Relative Unit:__ Responsive to parent element/screen size.
   
-  - `%`: width (relative to screen size)
-  - `rem`: font-size/padding
-  - `em`: font-size (relative to parent container)
-  - `vw`
-  - `vh`
+  - `%`: Relative to screen size/parent element.
+  - `rem`: `font-size`/`padding`
+  - `em`: font-size _(relative to parent container)_
+  - `vw`: Relative to viewport height _(eg. a landing page that takes up the entire screen of whatever device it is viewed on)_
+  - `vh`: Relative to `font-size` of root element.
 
-__*More Information*__: [CSS Units - W3Schools](https://www.w3schools.com/cssref/css_units.asp)
+__*More Information*__: 
+
+[CSS Values and Units - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+
+[CSS Units - W3Schools](https://www.w3schools.com/cssref/css_units.asp)
+
+[A Guide on When to Use Which Unit Values](https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/#:~:text=EM%20is%20relative%20to%20the,parent%20size%20is%2C%20use%20REM.)
 
 # Inline, Internal and External StyleSheets
 
